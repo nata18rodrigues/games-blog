@@ -1,0 +1,51 @@
+
+{% extends "base.html.j2" %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron">
+                <div class="card-group">
+                {% for console in consoles %}
+                    <div class="col-sm-4">
+                    <br><br><br>
+                        <div class="card" style="width: 25rem;">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_914685-MLU72565852654_112023-F.webp" class="card-img-top" alt="oi">
+                        <div class="card-body">
+                            <h5 class="card-title">{{console.name}}</h5>
+                            <h5 class="card-title">DE <s>R$ {{console.value}}</s></h5>
+                            <h5 class="card-title" id="sale">POR R$ {{console.sale}}</h5>
+                            <p class="card-text">{{console.description}}</p>
+
+                            <div class="card-footer">
+                                <a href="{{ url_for('view_console.detail', slug=console.slug) }}" class="btn btn-primary">
+                                    Descrição
+                                </a> - 
+                                <a href="{{ url_for('view_console.delete', slug=console.slug) }}" class="btn btn-danger">
+                                    Excluir
+                                </a> - 
+                                <a href="{{ url_for('view_console.update', slug=console.slug) }}" class="btn btn-info">
+                                    Editar
+                                </a>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>   
+                    </li> 
+                {% endfor %}
+                </div> 
+            
+        </div>
+
+
+
+    </div>
+
+    <div class="card">
+        
+        <a href="/add-product" style="position: absolute; bottom: 0;" >Adicionar Console</a>
+    
+    </div
+
+{% endblock content %}

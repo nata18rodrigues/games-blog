@@ -1,0 +1,8 @@
+Flask-Admin
+Flask-Bootstrap
+Flask-PyMongo
+dynaconf
+flask
+flask-simplelogin
+mistune
+python-slugify[unidecode]

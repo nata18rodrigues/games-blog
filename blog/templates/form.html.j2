@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <form action="{{console.url}}" method="post">
+                <div class="form-group"> 
+
+                    <label for="name">Modelo</label><br>
+                    <input for="text" name="name" value="{{console.name}}"/><br>
+
+                    <label for="brand">Marca</label><br>
+                    <input for="text" name="brand" value="{{console.name}}"/><br>
+
+                    <label for="value">Preço</label><br>
+                    <input for="text" name="value" value="{{console.value}}"/><br>
+
+                    <label for="sale">Valor promocional</label><br>
+                    <input for="text" name="sale" value="{{console.sale}}"/><br>
+
+
+                    <label for="description">Descrição</label><br>
+                    <input name="description" value="{{console.description}}" /><br>
+
+                    <input type="submit" value="Save"><br>
+                </div>
+            </form>
+        </div>
+    </div>
+     <div class="card">
+        <div class="card-header">
+            <a href="/" style="position: absolute; bottom: 0;" >Menu</a>
+        </div>
+    </div>
+{% endblock %}

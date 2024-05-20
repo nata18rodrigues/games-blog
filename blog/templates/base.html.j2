@@ -1,0 +1,52 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %} Console Retro {% endblock title %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css">
+    <style>
+        body{
+            background-color: white;
+            color: rgb(64,64,64);
+        }
+        h1{
+            margin: 0 0 0 0.35em;
+            color: aliceblue;
+            background-color: rgb(105,89,205);
+            padding: 24px;
+        }
+        p{
+            color: black;
+        }
+        small{
+            color: black;
+        }
+        #sale{
+            color: red;
+        }
+        input[type=text]{
+            width: 100%;
+        }
+        textarea{
+            width: 100%;
+        }
+        input[type=submit]{
+            background-color: rgb(105,89,205);
+            padding: 16px 32px;
+            margin: 4px 2px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
+
+{% block navbar %}
+    <div class="navbar container">
+        <div class="navbar-header" href="/">
+            <a class="navbar-brand">
+               <h1>Console Retro</h1>
+            </a>
+        </div>
+    </div>
+{% endblock %}
